@@ -53,9 +53,7 @@ This will start a local Flask server. Open the URL shown in your terminal (typic
 4. Explore the results across three tabs:
    - **Breakdown** — per-operation hit/miss table and stacked bar
    - **Policy Compare** — LRU vs FIFO vs OPT vs LFU side by side
-   - **Time Series Trace** — 
-
-   Format --> [HIT/MISS] [L1/L2/RAM] [READ/WRITE]
+   - **Time Series Trace** —  **[HIT/MISS]** **[L1/L2/RAM]** **[READ/WRITE]**
   e.g. 
   HIT L2 WRITE --> it is hit in cache and data accessed from L2 and it is write intruction 
 
@@ -69,15 +67,16 @@ Each line in the trace file should be:
 ```
 
 Example:
-
+```
 R 0x1a2b3c
 W 0x4d5e6f
 R 0x1a2b3c
 R 0x1a2b3d
 W 0x785e6f
 R 0x1ab45c
+```
 
- `R` = read access
+ `R` = read access ,
  `W` = write access
 
 You can take traces generated from mutliple cpp code like dijksta , matrix multiplication , random , linked - list etc in the TRACES folder 
